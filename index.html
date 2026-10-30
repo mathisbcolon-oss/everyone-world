@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#10172a" />
+    <title>EVERYONE — One World. Everyone.</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <a class="brand" href="#"><span class="brand-mark">E</span><span>EVERYONE</span></a>
+        <div class="tagline">ONE WORLD. EVERYONE.</div>
+        <div class="top-actions"><span class="status-dot"></span><span>WORLD ONLINE</span></div>
+      </header>
+      <main class="layout">
+        <aside class="sidebar">
+          <div class="eyebrow">YOUR WORLD</div>
+          <h1>Greenlands</h1>
+          <p class="muted">A world built by everyone.</p>
+          <div class="moves-card">
+            <div><span class="eyebrow">YOUR DAILY MOVES</span><strong id="moves">3 / 3</strong></div>
+            <div class="move-dots"><i></i><i></i><i></i></div>
+            <small>Moves reset at midnight UTC</small>
+          </div>
+          <div class="section-label">BUILD SOMETHING</div>
+          <div class="tool-grid" id="tools">
+            <button class="tool active" data-tool="tree"><span>♣</span><b>Tree</b></button>
+            <button class="tool" data-tool="house"><span>⌂</span><b>House</b></button>
+            <button class="tool" data-tool="tower"><span>▥</span><b>Tower</b></button>
+            <button class="tool" data-tool="rock"><span>◆</span><b>Rock</b></button>
+            <button class="tool" data-tool="flower"><span>✿</span><b>Flower</b></button>
+            <button class="tool" data-tool="bridge"><span>▤</span><b>Bridge</b></button>
+          </div>
+          <div class="hint"><span class="hint-icon">✦</span><span>Pick an object, then tap the island to place it. Every build uses one move.</span></div>
+          <button class="secondary-btn" id="createWorld">＋ Create a world</button>
+          <div class="sidebar-bottom"><span class="avatar">Y</span><span><b>Your explorer</b><small>New builder</small></span></div>
+        </aside>
+        <section class="world-panel">
+          <div class="world-heading"><div><span class="eyebrow">THE SHARED WORLD</span><h2>Make your mark.</h2></div><div class="world-controls"><button id="resetView" title="Reset view">↻</button><button id="zoomIn" title="Zoom in">＋</button><button id="zoomOut" title="Zoom out">−</button></div></div>
+          <div id="scene-wrap"><div class="scene-label"><span class="live-pulse"></span> GREENLANDS <span class="scene-divider">/</span> WORLD 001</div><div id="scene"></div><div class="scene-tip">DRAG TO ROTATE · SCROLL TO ZOOM</div></div>
+          <div class="bottom-info"><div><b id="objectCount">12</b><span> community creations</span></div><div>Built together, one move at a time.</div></div>
+        </section>
+      </main>
+    </div>
+    <div class="modal-backdrop hidden" id="modal">
+      <div class="modal">
+        <button class="modal-close" id="closeModal">×</button>
+        <span class="eyebrow">START SOMETHING NEW</span>
+        <h2>Create a world</h2>
+        <p class="muted">Choose a starting place. You can customize it in the world editor.</p>
+        <label for="worldName">WORLD NAME</label>
+        <input id="worldName" maxlength="24" placeholder="Your world name" value="New Horizons" />
+        <div class="templates">
+          <button class="template selected" data-theme="green"><span class="template-art green-art">🌲</span><b>Greenlands</b><small>Forests and rivers</small></button>
+          <button class="template" data-theme="snow"><span class="template-art snow-art">❄</span><b>Snowlands</b><small>Snowy mountains</small></button>
+          <button class="template" data-theme="desert"><span class="template-art desert-art">☀</span><b>Sunlands</b><small>Dunes and canyons</small></button>
+        </div>
+        <button class="primary-btn" id="startWorld">Open world editor →</button>
+        <small class="modal-note">Prototype only. World publishing and shared online saving are coming next.</small>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
